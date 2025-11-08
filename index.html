@@ -1,13 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweeto Paul - Profile</title>
+    <!-- Google Fonts for stylish text -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* Background image */
+            background: url('background.jpeg') no-repeat center center fixed;
+            background-size: cover;
+
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .profile-card {
+            background-color: rgba(255, 255, 255, 0.85); /* semi-transparent so background is visible */
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            padding: 30px;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #74ebd5;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 28px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .profile-card p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .profile-card p span {
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            position: relative;
+            top: 0px;
+            left: 3px;
+        }
+
+        @media (max-width: 400px) {
+            .profile-card {
+                padding: 20px;
+            }
+            .profile-card img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
 </head>
-<body style="text-align:center; font-family:sans-serif; margin-top: 50px;">
-    <img src="me (2).jpg" alt="My Photo" width="200"><br><br>
-    <h2>Sweeto paul</h2>
-    <p>Email: sweetopaul@gmail.com</p>
-    <p>Phone: 9747824352</p>
-    <p>Location: Kerala</p>
+<body>
+    <div class="profile-card">
+        <img src="me (2).jpg" alt="Sweeto Paul">
+        <h2>Sweeto Paul</h2>
+        <p><span>Email:</span> sweetopaul@gmail.com</p>
+        <p><span>Phone:</span> 9747824352</p>
+        <p><span>Location:</span> Kerala</p>
+    </div>
 </body>
 </html>
