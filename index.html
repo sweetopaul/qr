@@ -54,10 +54,42 @@
         .profile-card p span {
             font-weight: bold;
             color: #333;
-            text-align: center;
             position: relative;
             top: 0px;
             left: 3px;
+        }
+
+        .contact-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contact-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe5d;
+        }
+
+        .email-btn {
+            background-color: #0072c6;
+        }
+
+        .email-btn:hover {
+            background-color: #005fa3;
         }
 
         @media (max-width: 400px) {
@@ -78,7 +110,12 @@
         <p><span>Email:</span> sweetopaul@gmail.com</p>
         <p><span>Phone:</span> 9747824352</p>
         <p><span>Location:</span> Kerala</p>
+
+        <!-- Buttons for WhatsApp and Email -->
+        <div class="contact-buttons">
+            <a href="https://wa.me/919747824352" target="_blank" class="whatsapp-btn">WhatsApp Me</a>
+            <a href="mailto:sweetopaul@gmail.com" class="email-btn">Email Me</a>
+        </div>
     </div>
 </body>
 </html>
-
