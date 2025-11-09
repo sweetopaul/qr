@@ -5,38 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Family</title>
   <style>
-    body{
-         background: url(background.jpeg);
-         background-repeat: no-repeat;
-        background-size: cover;
-
+    /* 🌄 Background setup */
+    body {
+      background: url("background.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
+
+    /* 🏷️ Title styling */
     h1 {
       text-align: center;
+      color: white;
+      text-shadow: 2px 2px 6px black;
+      margin-top: 20px;
+      font-size: 2rem;
     }
 
-    /* Container for all images */
+    /* 🖼️ Gallery grid layout */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(2, auto); /* 2 columns */
-      gap: 20px; /* space between boxes */
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ✅ Responsive grid */
+      gap: 20px;
       justify-content: center;
-      margin-top: 20px;
-      padding: 10px;;
+      margin: 20px auto 40px;
+      max-width: 1000px;
+      padding: 10px;
     }
 
-    /* Each image box with border */
+    /* 📦 Image box with border */
     .img-box {
       border: 4px solid black;
       border-radius: 10px;
-      padding: 0; /* ✅ removes space between image and border */
-      width: fit-content;
-      margin: 0 auto;
+      overflow: hidden; /* ensures image corners are rounded */
+      background-color: rgba(255, 255, 255, 0.9); /* contrast over bg */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
     }
 
-    img {
-      display: block; /* removes bottom whitespace from inline images */
-      border-radius: 10px; /* optional: match rounded corners */
+    /* ✨ Hover effect */
+    .img-box:hover {
+      transform: scale(1.03);
+    }
+
+    /* 🖼️ Responsive image style */
+    .img-box img {
+      width: 100%;   /* ✅ scale with box */
+      height: auto;  /* maintain aspect ratio */
+      display: block;
+      border-radius: 10px;
+    }
+
+    /* 📱 Mobile adjustments */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      .gallery {
+        gap: 15px;
+        padding: 5px;
+      }
+      .img-box {
+        border-width: 3px;
+      }
     }
   </style>
 </head>
@@ -44,18 +76,10 @@
   <h1>MY FAMILY</h1>
 
   <div class="gallery">
-    <div class="img-box">
-      <img src="fam1.jpg" alt="Family" width="481" height="703">
-    </div>
-    <div class="img-box">
-      <img src="fam2.jpg" alt="Family" width="481" height="703">
-    </div>
-    <div class="img-box">
-      <img src="fam3.jpg" alt="Family" width="528" height="328">
-    </div>
-    <div class="img-box">
-      <img src="fam4.jpg" alt="Family" width="528" height="328">
-    </div>
+    <div class="img-box"><img src="fam1.jpg" alt="Family"></div>
+    <div class="img-box"><img src="fam2.jpg" alt="Family"></div>
+    <div class="img-box"><img src="fam3.jpg" alt="Family"></div>
+    <div class="img-box"><img src="fam4.jpg" alt="Family"></div>
   </div>
 
 </body>
